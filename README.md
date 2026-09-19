@@ -106,7 +106,7 @@
 
 4. Launch Claude Code (`claude`)
 5. On the lower left hand corner should show the size of context window in the current session. Issuing `/clear` will clear the context
-![ccstatusline](assets\ccstatusline.png)
+![ccstatusline](assets/ccstatusline.png)
 ***Size of context window: 14.4k***
 6. Congratulations. You have successfully added ccstatusline to Claude Code's status line
 
