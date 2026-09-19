@@ -40,55 +40,55 @@
     ```bash
     cat > ~/.config/ccstatusline/settings.json << EOF
     {
-    "version": 3,
-    "lines": [
-        [
-        {
-            "id": "1",
-            "type": "context-length",
-            "color": "yellow",
-            "bold": true,
-            "rawValue": true
-        },
-        {
-            "id": "2",
-            "type": "custom-text",
-            "customText": "(",
-            "color": "brightBlack",
-            "merge": "no-padding"
-        },
-        {
-            "id": "3",
-            "type": "context-percentage",
-            "color": "brightBlack",
-            "rawValue": true,
-            "merge": "no-padding"
-        },
-        {
-            "id": "4",
-            "type": "custom-text",
-            "customText": ")",
-            "color": "brightBlack",
-            "merge": "no-padding"
-        }
+        "version": 3,
+        "lines": [
+            [
+            {
+                "id": "1",
+                "type": "context-length",
+                "color": "yellow",
+                "bold": true,
+                "rawValue": true
+            },
+            {
+                "id": "2",
+                "type": "custom-text",
+                "customText": "(",
+                "color": "brightBlack",
+                "merge": "no-padding"
+            },
+            {
+                "id": "3",
+                "type": "context-percentage",
+                "color": "brightBlack",
+                "rawValue": true,
+                "merge": "no-padding"
+            },
+            {
+                "id": "4",
+                "type": "custom-text",
+                "customText": ")",
+                "color": "brightBlack",
+                "merge": "no-padding"
+            }
+            ],
+            [],
+            []
         ],
-        [],
-        []
-    ],
-    "flexMode": "full-minus-40",
-    "compactThreshold": 60,
-    "colorLevel": 2,
-    "defaultSeparator": " ",
-    "inheritSeparatorColors": false,
-    "globalBold": false,
-    "powerline": {
-        "enabled": false,
-        "separators": [" "],
-        "separatorInvertBackground": [false],
-        "startCaps": [],
-        "endCaps": [],
-        "autoAlign": false
-    }
+        "flexMode": "full-minus-40",
+        "compactThreshold": 60,
+        "colorLevel": 2,
+        "defaultSeparator": " ",
+        "inheritSeparatorColors": false,
+        "globalBold": false,
+        "powerline": {
+            "enabled": false,
+            "separators": [" "],
+            "separatorInvertBackground": [false],
+            "startCaps": [],
+            "endCaps": [],
+            "autoAlign": false
+        }
     }
     EOF
     ```
@@ -100,10 +100,10 @@
 
     ```JSON
     {
-    "statusLine": {
-        "type": "command",
-        "command": "npx ccstatusline@latest"
-    }
+        "statusLine": {
+            "type": "command",
+            "command": "npx ccstatusline@latest"
+        }
     }
     ```
 
