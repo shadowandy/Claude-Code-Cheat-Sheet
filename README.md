@@ -192,3 +192,41 @@ The content of my `.claude/settings.json` are:
 | `ReportFindings` | report code-review findings and structured analysis back to the host application or interface | 
 | `ScheduleWakeup` | primarily by the /loop command to self-pace and re-trigger prompts after a set delay | Not required | 
 | `AskUserQuestion` | asks multiple-choice questions when it needs a decision or a clarification | Clear prompts should not require Claude Code to ask clarification question |
+
+## 3. Sessions
+
+>Exiting, resuming, going back in time, etc.
+
+### 3.1 Keystrokes
+
+| Key Combination | What it does |
+|:--|:--|
+| `<Esc>` | Stops the current task | 
+| `<Esc> (twice)` | Go back to a certain prompt in time with option to either restore: <ul><li>code and conversation</li><li>conversation (but keep the code)</li><li>code (but keep the conversation)</li></ul> |
+| `<Ctrl> + S` | Stash the current prompt. Hitting `<Enter>` pops it from stash repopulates the prompt window | 
+| `<Ctrl> + B` | Backgrounds long-running bash commands in Claude Code. Use arrow keys to select backgrounded task and hit `<Enter>` to bring it back to foreground | 
+| `<Ctrl> + C (twice)`  | Exits Claude Code |
+| `<Ctrl> + Z` | Suspends Claude Code and move it to background. Need to use command `fg` in terminal to bring it back |
+
+### 3.2 Slash Commands
+
+| Command | What it does |
+|:--|:--|
+| `/usage` | Checking usage of plan's allowance
+| `/context` | Visualise current session's context window | 
+| `/clear` | Clear current session context window | 
+| `/resume` | Select from the list of past conversations to restore the session |  
+
+### 3.3 Some Other Tips & Tricks
+
+#### 3.3.1 Bash Commands in Claude Code
+
+To run bash command in Claude Code, prefix it with `!`. This will execute the bash command while allowing Claude Code to see its output.
+
+For example, `! ls | wc -l` will allow Claude Code to see number of items in the current directory.
+
+#### 3.3.2 Referencing Specific Files
+
+![Referencing files](assets/cc-referencefile.png)
+
+To target specific files in your prompt, instead of using filenames like mentioning `README.md`, instead do `@README.md`
